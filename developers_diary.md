@@ -63,9 +63,6 @@ This stage helped me understand how a Python application can be connected to an 
 
 ### Evidence
 
-Screenshots of the normal calculation and three invalid-input test scenarios are stored in the repository's testing evidence folder.
-### Evidence
-
 The following screenshots provide evidence of the Gradio interface testing:
 
 1. [Gradio Test 1 — Normal Calculation](New%20folder/Screenshot%202026-10-15%20124704.png)
@@ -122,4 +119,10 @@ Separating Python calculations from AI-generated explanations also helped ensure
 
 ### Evidence
 
-Screenshots were captured showing the Gemini API response, the `503 UNAVAILABLE` error, and the successful AI explanation displayed in Gradio.
+The following screenshot demonstrates successful Gemini API integration with the Gradio interface:
+
+[View Screenshot — Successful Gemini AI Explanation](gradio_ai_success.png.png)
+
+The screenshot shows Gemini explaining the income-based expense allocation using the financial results calculated by Python.
+
+During development, I also encountered a `503 UNAVAILABLE` error caused by temporary Gemini API server overload. I addressed this by configuring automatic retries and retaining exception handling so that the Python calculator could continue operating when the API was unavailable.
