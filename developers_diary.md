@@ -29,7 +29,7 @@ This stage improved my understanding of modular programming, input validation, a
 
 ![Screenshot 4](additional_tests.png/Screenshot%202026-10-12%20230054.png)
 
-## 15 October 2026 — Gradio Interface Implementation and Testing
+## 15 October 2026 - Gradio Interface Implementation and Testing
 
 ### Work Completed
 
