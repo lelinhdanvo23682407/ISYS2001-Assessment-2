@@ -28,3 +28,39 @@ This stage improved my understanding of modular programming, input validation, a
 ![Screenshot 3](additional_tests.png/Screenshot%202026-10-12%20225417.png)
 
 ![Screenshot 4](additional_tests.png/Screenshot%202026-10-12%20230054.png)
+
+## 15 October 2026 — Gradio Interface Implementation and Testing
+
+### Work Completed
+
+- Developed a Gradio user interface for the Household Fair-Share Budget Assistant.
+- Created input fields for two individuals' names, monthly take-home incomes, and three predefined expenses: rent, electricity, and internet.
+- Connected the Calculate Contributions button to the existing Python calculation functions.
+- Successfully displayed the income proportions, individual expense allocations, and monthly contribution totals.
+
+### Testing
+
+Four interface scenarios were tested:
+
+1. Normal calculation using the 60/40 income example.
+2. Negative monthly income.
+3. Zero combined monthly income.
+4. Empty person name.
+
+All four tests produced the expected results. Invalid inputs displayed error messages without crashing the interface.
+
+### Challenges and Solutions
+
+During development, the program initially raised a `NameError` because the core Python functions had not been executed in the current Google Colab runtime. I resolved this by running the function-definition cells before the Gradio interface.
+
+### AI Assistance
+
+I used ChatGPT to help connect the Gradio interface to the existing Python functions, understand the event handler, troubleshoot the `NameError`, and develop interface test scenarios. I ran the tests in Google Colab and checked the results.
+
+### Reflection
+
+This stage helped me understand how a Python application can be connected to an interactive interface. It also demonstrated the importance of input validation and testing both successful and invalid inputs.
+
+### Evidence
+
+Screenshots of the normal calculation and three invalid-input test scenarios are stored in the repository's testing evidence folder.
