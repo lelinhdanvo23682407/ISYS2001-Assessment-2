@@ -2,7 +2,7 @@
 
 ## 12 October 2026 - Core Python Development and Testing
 
-### Work Completed
+### Work Completed 
 - Defined the problem, target users, inputs, outputs, and calculation rules.
 - Designed the algorithm and worked through a manual example.
 - Implemented Python functions for input validation, income proportions, expense allocation, total verification, and result display.
