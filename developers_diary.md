@@ -64,3 +64,13 @@ This stage helped me understand how a Python application can be connected to an 
 ### Evidence
 
 Screenshots of the normal calculation and three invalid-input test scenarios are stored in the repository's testing evidence folder.
+### Evidence
+
+The following screenshots provide evidence of the Gradio interface testing:
+
+1. [Gradio Test 1 — Normal Calculation](New%20folder/Screenshot%202026-10-15%20124704.png)
+2. [Gradio Test 2 — Negative Income](New%20folder/Screenshot%202026-10-15%20125252.png)
+3. [Gradio Test 3 — Zero Combined Income](New%20folder/Screenshot%202026-10-15%20125407.png)
+4. [Gradio Test 4 — Empty Name](New%20folder/Screenshot%202026-10-15%20125449.png)
+
+All four tests produced the expected results. The screenshots demonstrate successful calculation, input validation, and error handling.
