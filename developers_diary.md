@@ -74,3 +74,52 @@ The following screenshots provide evidence of the Gradio interface testing:
 4. [Gradio Test 4 — Empty Name](New%20folder/Screenshot%202026-10-15%20125449.png)
 
 All four tests produced the expected results. The screenshots demonstrate successful calculation, input validation, and error handling.
+
+## 15 October 2026 - Gemini API Integration and Testing
+
+### Work Completed
+
+- Integrated the Gemini API into the Household Fair-Share Budget Assistant using the `google-genai` Python library.
+- Stored the API key securely using Google Colab Secrets instead of hardcoding it into the notebook.
+- Developed the `explain_budget_with_ai()` function to generate explanations of the household expense-sharing results.
+- Created `calculate_budget_with_ai()` to connect the existing Python calculations with Gemini.
+- Updated the Gradio interface to display both the financial calculations and AI-generated explanations.
+- Configured automatic API retries following the lecturer's guidance.
+
+### Testing and Results
+
+The application was tested using the following scenario:
+
+- Person A's monthly income: AUD 3,000
+- Person B's monthly income: AUD 2,000
+- Rent: AUD 1,200
+- Electricity: AUD 200
+- Internet: AUD 100
+
+Python calculated an income-based split of 60% for Person A and 40% for Person B, with total monthly contributions of AUD 900 and AUD 600 respectively.
+
+Gemini successfully generated an explanation using these results. The AI explanation was also displayed within the Gradio interface.
+
+### Challenges and Solutions
+
+During integration, an initial API request failed because the selected Gemini model was unavailable to new users. I resolved this by switching to an available model.
+
+I subsequently encountered a `503 UNAVAILABLE` error caused by high demand on Google's servers. Following the lecturer's guidance, I added automatic retry settings to the API client.
+
+I also retained exception handling so that the application could continue displaying Python-calculated financial results when the Gemini API was unavailable.
+
+### AI Assistance
+
+I used ChatGPT to help understand the Gemini API integration process, develop the explanation function, troubleshoot API errors, configure retry handling, and connect the AI functionality to Gradio.
+
+I executed the code in Google Colab, tested the integration, and checked the AI-generated figures against the Python calculation results.
+
+### Reflection
+
+This stage helped me understand how an external AI API can be integrated into a Python application. I learned that API availability cannot always be guaranteed and that error handling is important for application reliability.
+
+Separating Python calculations from AI-generated explanations also helped ensure that the application's financial results did not depend on the AI service.
+
+### Evidence
+
+Screenshots were captured showing the Gemini API response, the `503 UNAVAILABLE` error, and the successful AI explanation displayed in Gradio.
