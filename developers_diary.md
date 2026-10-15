@@ -126,3 +126,25 @@ The following screenshot demonstrates successful Gemini API integration with the
 The screenshot shows Gemini explaining the income-based expense allocation using the financial results calculated by Python.
 
 During development, I also encountered a `503 UNAVAILABLE` error caused by temporary Gemini API server overload. I addressed this by configuring automatic retries and retaining exception handling so that the Python calculator could continue operating when the API was unavailable.
+
+### Reflection on Course Demonstrations and Testing
+
+**Identifying Relevant Components**
+
+In the course demonstration, `Transaction` represents an individual financial transaction, while `FinanceTracker` manages financial records. In my Household Fair-Share Budget Assistant, the closest equivalent to `Transaction` is a shared household expense, such as rent, electricity, or internet. These expenses are stored in a Python dictionary rather than represented as separate objects.
+
+The closest equivalent to `FinanceTracker` is the combination of `allocate_expenses()`, `calculate_totals()`, and `calculate_budget()`, which process expenses, calculate contributions, and present the results.
+
+My application requires expense data, input validation, proportional allocation, and total verification. However, it does not require transaction history, account balances, a database, or separate transaction-management classes because its purpose is to calculate monthly contributions rather than track financial activity over time.
+
+**Design Decision**
+
+One decision I made independently was to use functions and dictionaries instead of copying the object-oriented structure from the course demonstration. This was more suitable for my application because it supports exactly two individuals and three predefined expense categories. I also chose to use integer cents for financial calculations to avoid inconsistencies caused by fractional-cent allocations.
+
+**Testing and Reflection**
+
+I tested `allocate_expenses()` because proportional allocation is the core function of my application. I wanted to verify that each person's contribution reflected their income proportion and that the allocated amounts always added up to the original expense.
+
+For example, with monthly incomes of AUD 3,000 and AUD 2,000, the program correctly divided AUD 1,500 in shared expenses into AUD 900 and AUD 600. I also tested rounding scenarios and verified that the contributions remained consistent with the total expense.
+
+These tests helped confirm the allocation logic. I retained integer-cent arithmetic and total verification to reduce rounding errors and improve the reliability of the calculations.
